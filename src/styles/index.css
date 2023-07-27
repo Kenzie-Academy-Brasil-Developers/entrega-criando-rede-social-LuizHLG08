@@ -1,0 +1,132 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+header{
+    width: 100%;
+    background-color: var(--grey1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 8%;
+}
+.header__log_out{
+    color: var(--grey5)
+}
+main{
+    width: 90%;
+}
+.profile__image{
+    height: 3.125rem;
+
+}
+.create_post_and_suggestions__container{
+    display: flex;
+    justify-content: space-between;
+    margin: 3%;
+}
+.posts__section{
+    margin: 3%;
+}
+.suggestions__section{
+    width: 35%;
+}
+.profile__container{
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+}
+.profile__image{
+    margin-right: 10px;
+}
+.profile__informations{
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1px;
+    
+}
+.suggestion__profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.create_post__section{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 40px;
+}
+.create_new_post{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 16px;
+    margin-top: 5px;
+}
+.create_new_post__input{
+    padding: 10px;
+    width: 100%;
+    color: var(--grey2);
+    border: 2px solid var(--grey4);
+    border-radius: 4px;
+}
+
+.create_new_post__input:focus{
+    border: 2px solid var(--brand-2);
+}
+.posts__section{
+    margin: 3%;
+}
+.post__container{
+    margin: 60px 0px;
+}
+.posts__title{
+    margin: 50px 0px;
+}
+.post__headline{
+    margin: 40px 0px;
+}
+.post__content{
+    text-align: justify;
+}
+.buttons__container{
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+@media (max-width: 1025px) {
+    .create_post_and_suggestions__container{
+        display: flex;
+        flex-direction: column;
+    }
+    .create_post__section{
+        width: 100%;
+    }
+    .suggestions__section{
+        width: 100%;
+    }
+    .suggestions__list{
+        display: flex;
+        justify-content: space-between;
+    }
+    .profile__container{
+        flex-wrap: wrap;
+    }
+    .suggestion__profile{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+}
+@media (max-width: 455px) {
+    .profile__container{
+
+        margin-bottom: 45px;
+    }
+}

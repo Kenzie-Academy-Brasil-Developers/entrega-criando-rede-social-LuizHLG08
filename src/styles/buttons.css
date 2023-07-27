@@ -1,0 +1,43 @@
+.create_post__button{
+    background-color: var(--brand-1);
+    color: var(--white-fixed);
+    height: 40px;
+    width: 65px;
+    border-radius: 5px;
+}
+.create_post__button:hover{
+    background-color: var(--brand-2);
+    cursor: pointer;
+}
+.follow__button{
+    background-color: var(--white-fixed);
+    color: var(--grey1);
+    border: 1px solid var(--grey1);
+    height: 30px;
+    min-width: 60px;
+    max-width: 60px;
+    border-radius: 3px;
+}
+.follow__button:hover{
+    background-color: var(--white-fixed);
+    color: var(--brand-1);
+    border: 1px solid var(--brand-2);
+    cursor: pointer;
+}
+.follow__button:focus{
+    color: var(--white-fixed);
+    background-color: var(--brand-2);
+    border: 1px solid var(--brand-2);
+    cursor: pointer;
+}
+.open_post__button{
+    background-color: var(--grey1);
+    color: var(--white-fixed);
+    width: 80px;
+    height: 40px;
+    border-radius: 4px;
+}
+.open_post__button:hover{
+    background-color: var(--grey0);
+    cursor: pointer;
+}
