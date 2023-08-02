@@ -62,62 +62,9 @@ function closePostModal(){
         postModal.close()
     })
 }
-function followProfile(){
-    const buttons = document.querySelectorAll('.follow__button')
-    for(let i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', () => {
-            if(!buttons[i].classList.contains('following')){
-                buttons[i].classList.add('following')
-                buttons[i].innerHTML = ''
-                buttons[i].innerHTML = 'Seguindo'
-            }else{
-                buttons[i].classList.remove('following')
-                buttons[i].innerHTML = ''
-                buttons[i].innerHTML = 'Seguir'
-            }
-        })
-    }
-}
-followProfile()
 
-function likePosts(array) {
-    const likeButton = document.querySelectorAll('.likes__figure')
-    let likesNumber = document.querySelectorAll('.likes__number')
-    for(let i = 0; i < likeButton.length; i++) {
-        likeButton[i].addEventListener('click', () => {
-            if(!likeButton[i].classList.contains('liked')){
-                likeButton[i].classList.add('liked')
-                likeButton[i].src = '../../src/assets/img/red-heart.svg'
-                array[i].likes++
-                likesNumber[i].innerHTML = ''
-                likesNumber[i].innerHTML = array[i].likes
-            } else {
-                likeButton[i].classList.remove('liked')
-                likeButton[i].src = '../../src/assets/img/gray-heart.svg'
-                array[i].likes--
-                likesNumber[i].innerHTML = ''
-                likesNumber[i].innerHTML = array[i].likes
-            }
-        })
-    }
-}
-likePosts(posts)
 
-function logOutModal(){
-    const logOutButton = document.querySelector('.header__log_out')
-    const logOutModal = document.querySelector('#log_out__modal')
-    logOutButton.addEventListener('click', () => {
-        logOutModal.showModal()
-    })
-    closeLogOutModal()
-}
-logOutModal()
 
-function closeLogOutModal(){
-    const continueButton = document.querySelector('.continue__button')
-    const logOutModal = document.querySelector('#log_out__modal')
-    continueButton.addEventListener('click', () => {
-        logOutModal.close()
-    })
-} 
+
+
 
