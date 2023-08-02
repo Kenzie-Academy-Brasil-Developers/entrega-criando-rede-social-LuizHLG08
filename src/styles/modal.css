@@ -3,6 +3,7 @@
     padding: 1rem;
     width: 80%;
     border-radius: 0.75rem;
+    border: none;
 }
 .modal__controller::backdrop{
     background-color: rgba(0, 0, 0, 0.8);
