@@ -5,13 +5,13 @@ function likePosts(array) {
         likeButton[i].addEventListener('click', () => {
             if(!likeButton[i].classList.contains('liked')){
                 likeButton[i].classList.add('liked')
-                likeButton[i].src = '../../src/assets/img/redheart.svg'
+                likeButton[i].src = './src/assets/img/redheart.svg'
                 array[i].likes++
                 likesNumber[i].innerHTML = ''
                 likesNumber[i].innerHTML = array[i].likes
             } else {
                 likeButton[i].classList.remove('liked')
-                likeButton[i].src = '../../src/assets/img/grayheart.svg'
+                likeButton[i].src = './src/assets/img/grayheart.svg'
                 array[i].likes--
                 likesNumber[i].innerHTML = ''
                 likesNumber[i].innerHTML = array[i].likes
