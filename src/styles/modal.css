@@ -1,0 +1,19 @@
+.post__modal{
+    margin: auto auto;
+    padding: 1rem;
+    width: 80%;
+    border-radius: 0.75rem;
+}
+.post__modal::backdrop{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.modal__container{
+    display: flex;
+}
+.modal_post__container{
+    margin: 0;
+    padding: 0;
+}
+.modal_post__headline{
+    margin-bottom: 2rem;
+}

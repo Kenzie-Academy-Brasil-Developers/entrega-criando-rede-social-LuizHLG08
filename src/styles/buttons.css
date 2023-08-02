@@ -41,3 +41,7 @@
     background-color: var(--grey0);
     cursor: pointer;
 }
+.close_modal__button{
+    height: 2.5rem;
+    cursor: pointer;
+}
