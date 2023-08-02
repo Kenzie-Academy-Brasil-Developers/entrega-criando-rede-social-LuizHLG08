@@ -27,7 +27,7 @@ function createPostModal (id) {
     postContent.classList.add('modal_post__content', 'text1')
     
     
-    closeButton.src = '../../src/assets/img/fecharjanela.png'
+    closeButton.src = './src/assets/img/fecharjanela.png'
     profileImage.src = posts[id].img
     profileName.innerText = posts[id].user
     profileProfession.innerText = posts[id].stack
