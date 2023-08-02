@@ -36,6 +36,15 @@
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
+      <dialog id="log_out__modal" class="modal__controller">
+        <div id="log_out__container" class="modal__container">
+          <h2 class="log_out__title">Tem certeza que desaja sair?</h2>
+          <div class="modal_buttons__container">
+            <button class="continue__button modal_log_out__button">Continuar</button>
+            <a class="log_out__button modal_log_out__button" href="./src/pages/index.html" target="_blank">Sair</a>
+          </div>
+        </div>
+      </dialog>
       <!-- ÁREA 1 (CRIAÇÃO DE POST E SUGESTÕES)-->
       <section class="create_post_and_suggestions__container">
         <!-- CRIAÇÃO DE UM NOVO POST -->
@@ -70,7 +79,7 @@
         <!-- SUGESTÕES PARA SEGUIR -->
         <section class="suggestions__section">
           <h2 class="suggestions__title title2">Sugestões para você seguir</h2>
-          <section class="sugestions_list__container">
+          <section class="suggestions_list__container">
             <ul class="suggestions__list">
               <!-- SUGESTÃO 1 -->
               <li class="suggestion__profile">
@@ -114,8 +123,6 @@
       <section class="posts__section">
         <h2 class="posts__title title1">Posts</h2>
         <!-- POST 1 -->
-        <dialog class="post__modal">
-        </dialog>
           <article class="post__container">
             <div  class="profile__container">
               <img  class="profile__image" src="./src/assets/img/user5.svg" alt="Iris Silva" />
@@ -143,7 +150,7 @@
                 src="src/assets/img/gray-heart.svg"
                 alt="Empty Heart(Post not liked)"
               />
-              <small class="likes__numbers">25</small>
+              <small class="likes__number">25</small>
             </div>
           </div>
         </article>
@@ -177,7 +184,7 @@
                 src="src/assets/img/gray-heart.svg"
                 alt="Empty Heart(Post not liked)"
               />
-              <small class="likes__numbers">19</small>
+              <small class="likes__number"">19</small>
             </div>
           </div>
         </article>
@@ -213,11 +220,13 @@
                 src="src/assets/img/gray-heart.svg"
                 alt="Empty Heart(Post not liked)"
               />
-              <small class="likes__numbers">8</small>
+              <small class="likes__number">8</small>
             </div>
           </div>
         </article>
       </section>
+      <dialog id="post__modal" class="modal__controller">
+      </dialog>
     </main>
   </body>
 </html>

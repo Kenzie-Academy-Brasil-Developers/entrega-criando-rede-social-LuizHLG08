@@ -1,14 +1,17 @@
-.post__modal{
+.modal__controller{
     margin: auto auto;
     padding: 1rem;
     width: 80%;
     border-radius: 0.75rem;
 }
-.post__modal::backdrop{
+.modal__controller::backdrop{
     background-color: rgba(0, 0, 0, 0.8);
 }
 .modal__container{
     display: flex;
+}
+.modal_profile__container{
+    margin: 0;
 }
 .modal_post__container{
     margin: 0;
@@ -16,4 +19,50 @@
 }
 .modal_post__headline{
     margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+#log_out__modal{
+    height: 15rem;
+    width: 60%;
+}
+#log_out__container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+.log_out__title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.modal_buttons__container{
+    display: flex;
+    gap: 3rem;
+}
+.modal_log_out__button{
+    height: 50px;
+    width: 130px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.continue__button{
+    background-color: rgba(42, 170, 42, 0.7);
+    color: white;
+}
+.continue__button:hover{
+    background-color: green;
+}
+.log_out__button{
+    background-color: rgba(245, 46, 46, 0.7);
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.log_out__button:hover{
+    background-color: rgb(228, 42, 42);
 }

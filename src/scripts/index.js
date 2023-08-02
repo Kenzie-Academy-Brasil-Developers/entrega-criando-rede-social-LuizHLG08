@@ -2,8 +2,7 @@
 
 
 function createPostModal (id) {
-    const postPosition = id - 1
-    const postModal = document.querySelector('.post__modal')
+    const postModal = document.querySelector('#post__modal')
 
     const closeButton = document.createElement('img')
     const modalContainer = document.createElement('div')
@@ -19,7 +18,7 @@ function createPostModal (id) {
     modalContainer.classList.add('modal__container')
     closeButton.classList.add('close_modal__button')
     postContainer.classList.add('modal_post__container')
-    profileContainer.classList.add('profile__container')
+    profileContainer.classList.add('profile__container', 'modal_profile__container')
     profileImage.classList.add('profile__image')
     profileInformations.classList.add('profile__informations')
     profileName.classList.add('title2')
@@ -29,11 +28,11 @@ function createPostModal (id) {
     
     
     closeButton.src = '../../src/assets/img/fechar-janela.png'
-    profileImage.src = posts[postPosition].img
-    profileName.innerText = posts[postPosition].user
-    profileProfession.innerText = posts[postPosition].stack
-    postHeadline.innerText = posts[postPosition].title
-    postContent.innerText = posts[postPosition].text
+    profileImage.src = posts[id].img
+    profileName.innerText = posts[id].user
+    profileProfession.innerText = posts[id].stack
+    postHeadline.innerText = posts[id].title
+    postContent.innerText = posts[id].text
 
     profileInformations.append(profileName, profileProfession)
     profileContainer.append(profileImage, profileInformations)
@@ -42,36 +41,83 @@ function createPostModal (id) {
     postModal.appendChild(modalContainer)
 }
 function openPostModal(){
-    const postModal = document.querySelector('.post__modal')
-    const buttonPost1 = document.querySelector('#buttonPost1')
-    const buttonPost2 = document.querySelector('#buttonPost2')
-    const buttonPost3 = document.querySelector('#buttonPost3')
-    buttonPost1.addEventListener('click', () => {
-        postModal.innerHTML = ''
-        createPostModal(1)
-        postModal.showModal()
-        closePostModal()
-    })
-    buttonPost2.addEventListener('click', () => {
-        postModal.innerHTML = ''
-        createPostModal(2)
-        postModal.showModal()
-        closePostModal()
-    })
-    buttonPost3.addEventListener('click', () => {
-        postModal.innerHTML = ''
-        createPostModal(3)
-        postModal.showModal()
-        closePostModal()
-    })
+    const postModal = document.querySelector('#post__modal')
+    const openPostButton = document.querySelectorAll('.open_post__button')
+
+        for (let i = 0; i < openPostButton.length; i++) {
+            openPostButton[i].addEventListener('click', () => {
+                postModal.innerHTML = ''
+                createPostModal(i)
+                postModal.showModal()
+                closePostModal()
+            })
+        }
 }
 openPostModal()
 
 function closePostModal(){
-    const postModal = document.querySelector('.post__modal')
+    const postModal = document.querySelector('#post__modal')
     const closeButton = document.querySelector('.close_modal__button')
     closeButton.addEventListener('click', () => {
         postModal.close()
     })
 }
+function followProfile(){
+    const buttons = document.querySelectorAll('.follow__button')
+    for(let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', () => {
+            if(!buttons[i].classList.contains('following')){
+                buttons[i].classList.add('following')
+                buttons[i].innerHTML = ''
+                buttons[i].innerHTML = 'Seguindo'
+            }else{
+                buttons[i].classList.remove('following')
+                buttons[i].innerHTML = ''
+                buttons[i].innerHTML = 'Seguir'
+            }
+        })
+    }
+}
+followProfile()
+
+function likePosts(array) {
+    const likeButton = document.querySelectorAll('.likes__figure')
+    let likesNumber = document.querySelectorAll('.likes__number')
+    for(let i = 0; i < likeButton.length; i++) {
+        likeButton[i].addEventListener('click', () => {
+            if(!likeButton[i].classList.contains('liked')){
+                likeButton[i].classList.add('liked')
+                likeButton[i].src = '../../src/assets/img/red-heart.svg'
+                array[i].likes++
+                likesNumber[i].innerHTML = ''
+                likesNumber[i].innerHTML = array[i].likes
+            } else {
+                likeButton[i].classList.remove('liked')
+                likeButton[i].src = '../../src/assets/img/gray-heart.svg'
+                array[i].likes--
+                likesNumber[i].innerHTML = ''
+                likesNumber[i].innerHTML = array[i].likes
+            }
+        })
+    }
+}
+likePosts(posts)
+
+function logOutModal(){
+    const logOutButton = document.querySelector('.header__log_out')
+    const logOutModal = document.querySelector('#log_out__modal')
+    logOutButton.addEventListener('click', () => {
+        logOutModal.showModal()
+    })
+    closeLogOutModal()
+}
+logOutModal()
+
+function closeLogOutModal(){
+    const continueButton = document.querySelector('.continue__button')
+    const logOutModal = document.querySelector('#log_out__modal')
+    continueButton.addEventListener('click', () => {
+        logOutModal.close()
+    })
+} 
 

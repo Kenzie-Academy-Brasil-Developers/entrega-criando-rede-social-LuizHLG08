@@ -14,7 +14,8 @@ header{
     position: fixed;
 }
 .header__log_out{
-    color: var(--grey5)
+    color: var(--grey5);
+    cursor: pointer;
 }
 main{
     margin-top: 100px;
@@ -111,6 +112,12 @@ main{
     text-overflow: ellipsis;
     
 }
+.post__likes{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
 @media (max-width: 1025px) {
     .create_post_and_suggestions__container{
         display: flex;
@@ -124,7 +131,7 @@ main{
         width: 100%;
         margin-top: 2.5rem;
     }
-    .sugestions_list__container{
+    .suggestions_list__container{
         overflow-x: auto;
     }
     .suggestions__list{

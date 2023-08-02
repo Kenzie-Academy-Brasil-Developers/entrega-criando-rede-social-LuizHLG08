@@ -14,8 +14,7 @@
     color: var(--grey1);
     border: 1px solid var(--grey1);
     height: 30px;
-    min-width: 60px;
-    max-width: 60px;
+    width: 60px;
     border-radius: 3px;
 }
 .follow__button:hover{
@@ -24,10 +23,18 @@
     border: 1px solid var(--brand-2);
     cursor: pointer;
 }
-.follow__button:focus{
+.following{
     color: var(--white-fixed);
     background-color: var(--brand-2);
     border: 1px solid var(--brand-2);
+    width: 90px;
+    cursor: pointer;
+}
+.following:hover{
+    color: var(--white-fixed);
+    background-color: var(--brand-2);
+    border: 1px solid var(--brand-2);
+    width: 90px;
     cursor: pointer;
 }
 .open_post__button{
